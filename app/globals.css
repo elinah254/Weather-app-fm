@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Basic page background similar to screenshot */
+:root {
+  --bg: #0b0c21;
+  --panel: rgba(28, 30, 50, 0.65);
+  --muted: rgba(255,255,255,0.75);
+}
+
+html, body { height: 100%; }
+body {
+  @apply bg-navy text-slate-100 antialiased;
+  background-image: radial-gradient(circle at 10% 10%, rgba(99,102,241,0.03), transparent 120px),
+                    radial-gradient(circle at 90% 80%, rgba(56,189,248,0.02), transparent 180px);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Utility card style */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+}
+
+/* Gradient hero card for current weather */
+.hero-grad {
+  background: linear-gradient(135deg,#5b21b6 0%, #334155 60%);
+  background-size: 200% 200%;
+}
+
+/* Small helper */
+.kicker { font-size: 0.85rem; color: rgba(255,255,255,0.75); }
